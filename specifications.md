@@ -1,3 +1,17 @@
+### App Operation: Initial Steps
+
+1. **Check if phone images are accessible:**
+   - **1a. Is the phone accessible?**
+     - Verify that the Android device is connected and recognized by adb.
+     - If not accessible, prompt the user to check the connection and enable USB debugging.
+   - **1b. Is the path of WhatsApp images found and accessible?**
+     - Attempt to access the default WhatsApp images directory (e.g., `/sdcard/WhatsApp/Media/WhatsApp Images/`).
+     - If accessible, proceed to the next step.
+   - **1c. If 1a is yes and 1b is not:**
+     - Attempt to find the full path that ends with `/Android/media/com.whatsapp/WhatsApp/Media/WhatsApp Images` on the device storage.
+     - Search common storage locations (e.g., `/sdcard/`, `/storage/emulated/0/`, etc.) for this path.
+     - If found and accessible, use this as the source directory for image transfer.
+     - If not found, report an error and prompt the user for manual intervention.
 
 ## WhatsApp Photo Downloader for Android — Specifications
 
@@ -6,6 +20,9 @@
 - The app is designed exclusively for Android devices. iOS or other platforms are not supported.
 - The Android device must have WhatsApp installed and accessible via adb (Android Debug Bridge).
 - The computer must run Linux and have adb installed and configured.
+
+- The app must be usable both as a command-line tool (invoked directly from the terminal) and via a simple graphical frontend.
+- For the initial version, the frontend will be implemented using Streamlit for ease of use.
 
 
 
