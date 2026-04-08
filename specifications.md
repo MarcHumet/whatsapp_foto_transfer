@@ -24,6 +24,8 @@
 - The app must be usable both as a command-line tool (invoked directly from the terminal) and via a simple graphical frontend.
 - For the initial version, the frontend will be implemented using Streamlit for ease of use.
 
+- All Python source files must be placed in the `/src` directory for project organization and maintainability.
+
 
 
 ### Aims
